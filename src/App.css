@@ -1,0 +1,308 @@
+/* GLOBAL RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Inter",sans-serif;
+}
+
+body{
+background:#f4f6f9;
+color:#333;
+}
+
+/* APP WRAPPER */
+
+.app{
+width:100%;
+min-height:100vh;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1300px;
+margin:auto;
+padding:0 30px;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:white;
+padding:18px 0;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.04);
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.logo{
+font-weight:700;
+font-size:22px;
+color:#ff4d4d;
+letter-spacing:0.5px;
+}
+
+/* SEARCH */
+
+.search-input{
+width:320px;
+padding:10px 18px;
+border-radius:30px;
+border:1px solid #ddd;
+outline:none;
+font-size:14px;
+transition:0.25s ease;
+}
+
+.search-input:focus{
+border-color:#ff4d4d;
+box-shadow:0 0 0 2px rgba(255,77,77,0.1);
+}
+
+/* CART BUTTON */
+
+.cart-btn{
+background:#ff4d4d;
+color:white;
+border:none;
+padding:8px 18px;
+border-radius:25px;
+font-weight:500;
+cursor:pointer;
+transition:0.25s;
+}
+
+.cart-btn:hover{
+background:#e60000;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,#ff4d4d,#ff7a45);
+padding:70px 20px;
+text-align:center;
+color:white;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+font-weight:600;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+/* CATEGORY BUTTONS */
+
+.categories{
+margin:40px auto 25px;
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.categories button{
+padding:9px 22px;
+border-radius:25px;
+border:1px solid #ff4d4d;
+background:white;
+cursor:pointer;
+font-weight:500;
+transition:0.25s ease;
+}
+
+.categories button.active,
+.categories button:hover{
+background:#ff4d4d;
+color:white;
+box-shadow:0 4px 12px rgba(255,77,77,0.2);
+}
+
+/* FOOD GRID */
+
+.food-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+gap:28px;
+margin-bottom:70px;
+}
+
+/* FOOD CARD */
+
+.card{
+background:white;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition:0.35s ease;
+display:flex;
+flex-direction:column;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+
+.img-wrapper{
+height:200px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.4s ease;
+}
+
+.card:hover img{
+transform:scale(1.08);
+}
+
+/* CARD BODY */
+
+.card-body{
+padding:18px;
+}
+
+.card-body h3{
+font-size:18px;
+font-weight:600;
+color:#333;
+}
+
+/* PRICE ROW */
+
+.price-row{
+margin-top:14px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.price-row span{
+font-size:16px;
+font-weight:600;
+color:#ff4d4d;
+}
+
+.price-row button{
+background:#ff4d4d;
+border:none;
+color:white;
+padding:7px 18px;
+border-radius:20px;
+cursor:pointer;
+font-weight:500;
+transition:0.25s;
+}
+
+.price-row button:hover{
+background:#e60000;
+}
+
+/* CART PANEL */
+
+.cart-panel{
+position:fixed;
+right:0;
+top:0;
+height:100%;
+width:320px;
+background:white;
+box-shadow:-5px 0 25px rgba(0,0,0,0.1);
+padding:25px;
+z-index:2000;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.cart-panel h3{
+font-size:20px;
+margin-bottom:5px;
+}
+
+/* CART ITEMS */
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #eee;
+padding-bottom:10px;
+}
+
+.cart-item h4{
+font-size:15px;
+margin-bottom:3px;
+}
+
+.cart-item p{
+font-size:13px;
+color:#666;
+}
+
+.cart-item button{
+background:#ff4d4d;
+border:none;
+color:white;
+padding:4px 10px;
+border-radius:5px;
+cursor:pointer;
+font-size:12px;
+}
+
+.cart-item button:hover{
+background:#e60000;
+}
+
+/* CHECKOUT BUTTON */
+
+.checkout{
+background:#ff4d4d;
+color:white;
+border:none;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+margin-top:10px;
+}
+
+.checkout:hover{
+background:#e60000;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.search-input{
+width:180px;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+}
